@@ -23,17 +23,21 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-let h2 = document.querySelector("h2");
+let daytime = document.querySelector("#currentday");
 let currentTime = new Date();
-h2.innerHTML = formatDate(currentTime);
+daytime.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+    response.data.main.temp);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+    document.querySelector("#humidity").innerHTML =
+    response.data.main.humidity;
+   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+document.querySelector("#weathericon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  
 }
 
 function searchCity(city) {
