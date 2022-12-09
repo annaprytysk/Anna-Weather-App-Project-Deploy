@@ -28,6 +28,8 @@ let currentTime = new Date();
 daytime.innerHTML = formatDate(currentTime);
 
 function displayWeatherCondition(response) {
+  celsiusTemp = response.data.main.temp
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp);
@@ -37,7 +39,6 @@ function displayWeatherCondition(response) {
     response.data.main.humidity;
    document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
 document.querySelector("#weathericon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  
 }
 
 function searchCity(city) {
@@ -52,7 +53,32 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+let celsiusTemp = null;
+
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
+
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let FahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    FahrenheitTemp);  
+};
+
+function displayCelsiusTemp(event) { 
+  event.preventDefault();
+    let FahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  document.querySelector("#temperature").innerHTML = Math.round(
+    FahrenheitTemp);  
+
+};
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+fahrenheitLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Bratislava");
