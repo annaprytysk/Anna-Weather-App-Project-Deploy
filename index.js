@@ -75,10 +75,4 @@ function displayCelsiusTemp(event) {
 
 };
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius");
-fahrenheitLink.addEventListener("click", displayCelsiusTemp);
-
 searchCity("Bratislava");

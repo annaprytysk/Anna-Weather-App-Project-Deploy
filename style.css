@@ -4,10 +4,15 @@ h1 {
 
 h2 {
     color: #135564;
+    font-size: medium;
 }
 
 h3 {
     color: #0dcaf0;
+}
+
+h6 {
+    text-align: center;
 }
 
 .card-header {

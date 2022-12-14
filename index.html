@@ -23,8 +23,10 @@
                 <input type="submit" value="Search" class="btn btn-info" />
             </div>
         </form>
-        <br />
         <hr />
+
+            <div class="row">
+                <div class="col">
         <h1>
             <p id="city">
                 Bratislava
@@ -36,15 +38,15 @@
                 <span id="temperature">
                     17
                 </span>
-                <span>
-                    <a href="#" id="celsius">°C</a> |
+                <span id="celsius">
+                    °C
                 </span>
-                <span>
-                    <a href="#" id="fahrenheit">°F</a>
-                </span>
+                
             </p>
         </h1>
+</div>
 
+<div class="col">
         <h2>
             Today it is
             <span id="currentday">
@@ -76,6 +78,8 @@ Monday
     </span>
     m/s
 </h2>
+</div>
+</div>
         <br />
         <hr />
 
@@ -89,50 +93,33 @@ Monday
                         <div class="card-header">Today</div>
                         <div class="card-body">
                             <h5 class="card-title">
-                                Sunny
-                                <i class="fa-regular fa-sun"></i>
+                                 <span>
+                                 <img id="forecasticon1" src="https://openweathermap.org/img/wn/02d@2x.png" alt="weather icon" width="50px">
+                               </span>
+                               <div>
+Sunny
+                               </div>
+                                
                             </h5>
                             <p class="card-text">
-                                19°C
+                                19°C | 12°C
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Tomorrow</div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Sunny
-                                <i class="fa-regular fa-sun"></i>
-                            </h5>
-                            <p class="card-text">
-                                21°C
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card text-dark bg-info mb-3" style="max-width: 18rem;">
-                        <div class="card-header">Weekend</div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                Cloudy
-                                <i class="fa-solid fa-cloud-sun"></i>
-                            </h5>
-                            <p class="card-text">
-                                17°C
-                            </p>
-                        </div>
-                    </div>
-                </div>
+
+
             </div>
         </div>
-    </div>
+   
 
     <div>
+        <h6>
         Anna's GitHub repository <a href="https://github.com/annaprytysk/Anna-Weather-App-Project-Deploy">here</a>
+
+        </h6>
     </div>
+</div>
 
     <script src="index.js"></script>
 </body>
