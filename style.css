@@ -22,3 +22,6 @@ h6 {
 a:link {
     text-decoration: none;
 }
+.weather-forecast-temperature-min {
+    opacity: 0.5;
+}
